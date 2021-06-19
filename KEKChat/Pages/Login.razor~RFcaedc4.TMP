@@ -1,0 +1,34 @@
+﻿
+
+@using Controllers
+
+<h3>Login</h3>
+
+<h3>
+    Username
+</h3>
+<input type="text" @bind="_username" />
+<br />
+<br />
+<h3>
+    Password
+</h3>
+<input type="text" @bind= "_password" />
+
+@code {
+    static private string _username;
+    static private string _password;
+
+    static void CheckData()
+    {
+        if (DatabaseController.CheckInformation(_username, _password) == true)
+        {
+            Console.WriteLine("Logged in");
+        }
+        else
+        {
+            Console.WriteLine("Failed to log in");
+        }
+    }
+
+}

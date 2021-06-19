@@ -1,0 +1,40 @@
+﻿@page "/login"
+
+@using Controllers
+
+<h3>Login</h3>
+
+<h3>
+    Username
+</h3>
+<input type="text" @bind="_username" />
+<br />
+<br />
+<h3>
+    Password
+</h3>
+<input type="text" @bind="_password" />
+
+<button type="button" @onclick="CheckData"></button>
+
+@code {
+
+    
+    static string _username;
+    static string _password;
+    /// <summary>
+    /// Creating a method to use the controller
+    /// </summary>
+    static void CheckData()
+    {
+        if (DatabaseController.CheckInformation(_username, _password) == true)
+        {
+            Console.WriteLine("Logged in");
+        }
+        else
+        {
+            Console.WriteLine("Failed to log in");
+        }
+    }
+
+}
