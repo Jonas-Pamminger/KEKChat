@@ -94,8 +94,12 @@ using Controllers;
 #line 20 "C:\Users\Andrei\Desktop\KEKChazt\KEKChat\KEKChat\Pages\Login.razor"
        
 
+    
     static string _username;
     static string _password;
+    /// <summary>
+    /// Creating a method to use the controller
+    /// </summary>
     static void CheckData()
     {
         if (DatabaseController.CheckInformation(_username, _password) == true)

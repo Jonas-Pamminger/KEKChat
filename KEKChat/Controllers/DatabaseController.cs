@@ -11,7 +11,7 @@ namespace KEKChat.Controllers
     {
         public static bool CheckInformation(string username, string password)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Andrei\Desktop\LoginDatabase.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"CONNECTION STRING");
 
             SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From [Table] Where [USERNAME]='" + username + "' and [PASSWORD]='" + password + "'", con);
 
