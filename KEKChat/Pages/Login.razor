@@ -1,6 +1,7 @@
 ﻿@page "/login"
 
 @using Controllers
+@inject NavigationManager NavManager
 
 <h3>Login</h3>
 
@@ -15,25 +16,36 @@
 </h3>
 <input type="text" @bind="_password" />
 
-<button type="button" @onclick="CheckData"></button>
+@if (DatabaseController.CheckInformation(_username, _password) == false && clicked == true)
+{
+    <br />
+    <p>The username or password was incorrect. Please check them again</p>
+}
+
+<button type="button" @onclick="() => CheckData()"></button>
 
 @code {
 
-    
-    static string _username;
-    static string _password;
+    string _username;
+    string _password;
+    bool clicked = false;
+
     /// <summary>
     /// Creating a method to use the controller
     /// </summary>
-    static void CheckData()
+    ///
+
+    private void CheckData()
     {
+
         if (DatabaseController.CheckInformation(_username, _password) == true)
         {
-            Console.WriteLine("Logged in");
+            clicked = false;
+            NavManager.NavigateTo("/chatroom");
         }
         else
         {
-            Console.WriteLine("Failed to log in");
+            clicked = true;
         }
     }
 
