@@ -23,7 +23,7 @@ namespace KEKChat.Controllers
             {
                 return true;
             }
-            else
+            else 
             {
                 return false;
             }
