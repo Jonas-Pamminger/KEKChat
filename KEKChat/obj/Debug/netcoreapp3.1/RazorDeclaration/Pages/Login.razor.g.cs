@@ -108,7 +108,6 @@ using Controllers;
 
         if (DatabaseController.CheckInformation(_username, _password) == true)
         {
-            clicked = false;
             NavManager.NavigateTo("/chatroom");
         }
         else
