@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IF200195\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj": {}
+    "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IF200195\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj": {
+    "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IF200195\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj",
+        "projectUniqueName": "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj",
         "projectName": "KEKChat",
-        "projectPath": "C:\\Users\\IF200195\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj",
-        "packagesPath": "C:\\Users\\IF200195\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IF200195\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\obj\\",
+        "projectPath": "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj",
+        "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\IF200195\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -67,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
