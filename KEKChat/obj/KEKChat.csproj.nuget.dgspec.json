@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj": {}
+    "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj": {
+    "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
         "projectName": "KEKChat",
-        "projectPath": "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\KEKChat.csproj",
-        "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andrei\\Source\\Repos\\RoKyYy1412\\KEKChat\\KEKChat\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -41,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "BlazorInputFile": {
+              "target": "Package",
+              "version": "[0.2.0, )"
+            },
             "Microsoft.AspNetCore.SignalR.Client": {
               "target": "Package",
               "version": "[5.0.7, )"
@@ -68,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
