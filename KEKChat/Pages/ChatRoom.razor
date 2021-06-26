@@ -2,9 +2,12 @@
 @inject NavigationManager navigationManager
 @using Microsoft.AspNetCore.SignalR.Client;
 @using BlazorChat;
-
-<h1>Blazor SignalR Chat Sample</h1>
+@using System.IO;
+@using BlazorInputFile;
+@using KEKChat.Services;
+<h1>KEKChat</h1>
 <hr />
+
 
 @if (!_isChatting)
 {

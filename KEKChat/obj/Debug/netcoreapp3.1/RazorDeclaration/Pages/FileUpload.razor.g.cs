@@ -75,8 +75,43 @@ using KEKChat.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\FileUpload.razor"
+using Microsoft.AspNetCore.SignalR.Client;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\FileUpload.razor"
+using BlazorChat;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\FileUpload.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\FileUpload.razor"
+using BlazorInputFile;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\FileUpload.razor"
+using KEKChat.Services;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/files")]
+    public partial class FileUpload : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -84,18 +119,28 @@ using KEKChat.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\Counter.razor"
-       
-    private int currentCount = 0;
+#line 18 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\FileUpload.razor"
+ 
+	private string _photoURL;
 
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+	private async Task HandlePhotoSelcted(IFileListEntry[] files)
+	{
+		var sourceFile = files.FirstOrDefault();
+		if (sourceFile != null)
+		{
+			//Convert size
+			var imageFile = await sourceFile.ToImageFileAsync("image/jpeg", 800, 600);
+			//Request URL
+			MemoryStream bytes = await imageFile.ReadAllAsync();
+			_photoURL = bytes.ToDataUrl("image/jpeg");
+		}
+	}
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
     }
 }
 #pragma warning restore 1591
