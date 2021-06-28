@@ -1,27 +1,37 @@
 ﻿@page "/register"
 @using KEKChat.Controllers
 
-<h3>Register</h3>
+<div class="loginPage">
+    <div style="position:absolute; left:50px; top:20px;">
+        <h2 class="textLogin">Register</h2>
+    </div>
 
-<h3>
-    Username
-</h3>
-<input type="text" @bind="username" />
-<br />
-<br />
-<h3>
-    Password
-</h3>
-<input type="text" @bind="password" />
+    <h1></h1>
+    <h3></h3>
 
-<button @onclick="InputInfo">Register</button>
+    <h3 class="textd">
+        Username
+    </h3>
+    <input class="inputE" type="text" @bind="username" />
+    <br />
+    <br />
+    <h3 class="textd">
+        Password
+    </h3>
+    <input class="inputE" type="text" @bind="password" />
+    <h3></h3>
+    <h1>    </h1>
 
-@code {
-    string username;
-    string password;
+    <button class="btn btn-secondary btn-lg btn-block" @onclick="InputInfo">Register</button>
+</div>
+   
 
-    private void InputInfo()
-    {
-        DatabaseController.InputInformation(username, password);
+    @code {
+        string username;
+        string password;
+
+        private void InputInfo()
+        {
+            DatabaseController.InputInformation(username, password);
+        }
     }
-}
