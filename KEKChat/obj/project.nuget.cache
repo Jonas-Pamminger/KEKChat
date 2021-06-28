@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "omvEyjNYWAIZs/KEvJwCAmHpcISWoCQDqBZDP9r697rXAPgUIDhVrvDLKsiYxJDyscUS1KDr7H62fSmd7YU2Aw==",
+  "dgSpecHash": "xLiLLNjvMYjDFncI2nzuPLNbPWPl8bGoH19Dqav2iBh1XhV2p4BfBoX15PB21z89xz+IQ4lQMiLANhkGumdjLQ==",
   "success": true,
-  "projectFilePath": "G:\\KEKChat\\KEKChat\\KEKChat.csproj",
+  "projectFilePath": "C:\\Users\\Andrei\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrei\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\datajuggler.blazor.fileupload\\1.6.0\\datajuggler.blazor.fileupload.1.6.0.nupkg.sha512",

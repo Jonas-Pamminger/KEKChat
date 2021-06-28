@@ -1400,11 +1400,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\KEKChat\\KEKChat\\KEKChat.csproj",
+      "projectUniqueName": "C:\\Users\\Andrei\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
       "projectName": "KEKChat",
-      "projectPath": "G:\\KEKChat\\KEKChat\\KEKChat.csproj",
+      "projectPath": "C:\\Users\\Andrei\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
       "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
-      "outputPath": "G:\\KEKChat\\KEKChat\\obj\\",
+      "outputPath": "C:\\Users\\Andrei\\Desktop\\KEKChat\\KEKChat\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
