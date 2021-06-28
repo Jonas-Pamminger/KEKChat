@@ -1,3 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/BlazorInputFile" Path="C:\Users\User\.nuget\packages\blazorinputfile\0.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorInputFile" Path="C:\Users\Andrei\.nuget\packages\blazorinputfile\0.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/DataJuggler.Blazor.FileUpload" Path="C:\Users\Andrei\.nuget\packages\datajuggler.blazor.fileupload\1.6.0\build\..\staticwebassets\" />
 </StaticWebAssets>

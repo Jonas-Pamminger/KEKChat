@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj": {}
+    "G:\\KEKChat\\KEKChat\\KEKChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj": {
+    "G:\\KEKChat\\KEKChat\\KEKChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
+        "projectUniqueName": "G:\\KEKChat\\KEKChat\\KEKChat.csproj",
         "projectName": "KEKChat",
-        "projectPath": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\obj\\",
+        "projectPath": "G:\\KEKChat\\KEKChat\\KEKChat.csproj",
+        "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+        "outputPath": "G:\\KEKChat\\KEKChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -43,6 +44,10 @@
             "BlazorInputFile": {
               "target": "Package",
               "version": "[0.2.0, )"
+            },
+            "DataJuggler.Blazor.FileUpload": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Microsoft.AspNetCore.SignalR.Client": {
               "target": "Package",
@@ -71,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

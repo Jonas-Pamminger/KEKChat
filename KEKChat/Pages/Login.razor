@@ -1,51 +1,67 @@
 ﻿@page "/login"
 
 @using Controllers
+@using KEKChat.Pages;
 @inject NavigationManager NavManager
 
-<h3>Login</h3>
+<h2>
+    <u>
+        <big class="text-muted">Login</big>
+    </u>
+</h2>
 
 <h3>
     Username
 </h3>
-<input type="text" @bind="_username" />
+<input type="text" @bind="username" />
 <br />
 <br />
 <h3>
     Password
 </h3>
-<input type="text" @bind="_password" />
+<input type="text" @bind="password" />
 
-@if (DatabaseController.CheckInformation(_username, _password) == false && clicked == true)
+
+<button class="btn btn-outline-success" @onclick="() => CheckData()">Login</button>
+
+@if (CheckData() == false && clicked == true)
 {
     <br />
     <p>The username or password was incorrect. Please check them again</p>
 }
-<button class="btn btn-outline-success" @onclick="() => CheckData()">Login</button>
 
 @code {
-
-    string _username;
-    string _password;
+    private string username;
+    private string password;
     bool clicked = false;
-
+    int i = 0;
     /// <summary>
     /// Creating a method to use the controller
     /// </summary>
     ///
 
-    private void CheckData()
+    public static string Username { get; set; }
+    
+    private bool CheckData()
     {
-
-        if (DatabaseController.CheckInformation(_username, _password) == true)
+        if (i < 3)
         {
-            clicked = false;
-            NavManager.NavigateTo("/chatroom");
+            i++;
+            return true;
         }
         else
         {
-            clicked = true;
+            if (DatabaseController.CheckInformation(username, password) == true && clicked == true)
+            {
+                Username = username;
+                NavManager.NavigateTo("/chatroom");
+                return true;
+            }
+            else
+            {
+                clicked = true;
+                return false;
+            }
         }
     }
-
 }

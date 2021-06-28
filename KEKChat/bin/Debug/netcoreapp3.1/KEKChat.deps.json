@@ -32,6 +32,7 @@
       "KEKChat/1.0.0": {
         "dependencies": {
           "BlazorInputFile": "0.2.0",
+          "DataJuggler.Blazor.FileUpload": "1.6.0",
           "Microsoft.AspNetCore.SignalR.Client": "5.0.7",
           "System.Data.SqlClient": "4.8.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -322,6 +323,7 @@
           "lib/netstandard2.1/BlazorInputFile.dll": {}
         }
       },
+      "DataJuggler.Blazor.FileUpload/1.6.0": {},
       "Microsoft.AspNetCore.Authorization/3.1.0-preview3.19555.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "3.1.0-preview3.19555.2",
@@ -2310,6 +2312,13 @@
       "sha512": "sha512-wsPTwoA9fkHOxjEh0W0brNeTaVBaMCFwfBLehbRhfW+RzlIrYtlJ5qFpT5f377Ej6ELk+xeoUrkDBx9c8JF7DQ==",
       "path": "blazorinputfile/0.2.0",
       "hashPath": "blazorinputfile.0.2.0.nupkg.sha512"
+    },
+    "DataJuggler.Blazor.FileUpload/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dtSt15KVjYTi5pRQraRJezafQo+1zg2KB//BL7rVu0mefx4Y7YnFefINirroeiECRUM867ZoXkEHc3usW6upRg==",
+      "path": "datajuggler.blazor.fileupload/1.6.0",
+      "hashPath": "datajuggler.blazor.fileupload.1.6.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/3.1.0-preview3.19555.2": {
       "type": "package",

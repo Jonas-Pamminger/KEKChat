@@ -21,6 +21,15 @@
           "buildMultiTargeting/BlazorInputFile.props": {}
         }
       },
+      "DataJuggler.Blazor.FileUpload/1.6.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/DataJuggler.Blazor.FileUpload.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/DataJuggler.Blazor.FileUpload.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/3.1.0-preview3.19555.2": {
         "type": "package",
         "dependencies": {
@@ -484,6 +493,29 @@
         "lib/netstandard2.0/BlazorInputFile.dll",
         "lib/netstandard2.1/BlazorInputFile.dll",
         "staticwebassets/inputfile.js"
+      ]
+    },
+    "DataJuggler.Blazor.FileUpload/1.6.0": {
+      "sha512": "dtSt15KVjYTi5pRQraRJezafQo+1zg2KB//BL7rVu0mefx4Y7YnFefINirroeiECRUM867ZoXkEHc3usW6upRg==",
+      "type": "package",
+      "path": "datajuggler.blazor.fileupload/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "BlazorFileUploadIcon.png",
+        "LICENSE",
+        "build/DataJuggler.Blazor.FileUpload.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/DataJuggler.Blazor.FileUpload.props",
+        "buildTransitive/DataJuggler.Blazor.FileUpload.props",
+        "datajuggler.blazor.fileupload.1.6.0.nupkg.sha512",
+        "datajuggler.blazor.fileupload.nuspec",
+        "lib/net5.0/DataJuggler.Blazor.FileUpload.dll",
+        "staticwebassets/Images/Buttons/BlackButton.jpg",
+        "staticwebassets/Images/Buttons/BlackButtonWide.jpg",
+        "staticwebassets/background.png",
+        "staticwebassets/exampleJsInterop.js",
+        "staticwebassets/styles.css"
       ]
     },
     "Microsoft.AspNetCore.Authorization/3.1.0-preview3.19555.2": {
@@ -1357,24 +1389,25 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "BlazorInputFile >= 0.2.0",
+      "DataJuggler.Blazor.FileUpload >= 1.6.0",
       "Microsoft.AspNetCore.SignalR.Client >= 5.0.7",
       "System.Data.SqlClient >= 4.8.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Andrei\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
+      "projectUniqueName": "G:\\KEKChat\\KEKChat\\KEKChat.csproj",
       "projectName": "KEKChat",
-      "projectPath": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\KEKChat.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\KEKChat\\KEKChat\\obj\\",
+      "projectPath": "G:\\KEKChat\\KEKChat\\KEKChat.csproj",
+      "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+      "outputPath": "G:\\KEKChat\\KEKChat\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1382,7 +1415,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -1403,6 +1437,10 @@
           "BlazorInputFile": {
             "target": "Package",
             "version": "[0.2.0, )"
+          },
+          "DataJuggler.Blazor.FileUpload": {
+            "target": "Package",
+            "version": "[1.6.0, )"
           },
           "Microsoft.AspNetCore.SignalR.Client": {
             "target": "Package",
@@ -1431,7 +1469,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

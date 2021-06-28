@@ -13,99 +13,99 @@ namespace KEKChat.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 1 "G:\KEKChat\KEKChat\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 2 "G:\KEKChat\KEKChat\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 3 "G:\KEKChat\KEKChat\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 4 "G:\KEKChat\KEKChat\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 5 "G:\KEKChat\KEKChat\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 6 "G:\KEKChat\KEKChat\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 7 "G:\KEKChat\KEKChat\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 8 "G:\KEKChat\KEKChat\_Imports.razor"
 using KEKChat;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\User\Desktop\KEKChat\KEKChat\_Imports.razor"
+#line 9 "G:\KEKChat\KEKChat\_Imports.razor"
 using KEKChat.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\ChatRoom.razor"
+#line 3 "G:\KEKChat\KEKChat\Pages\ChatRoom.razor"
 using Microsoft.AspNetCore.SignalR.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\ChatRoom.razor"
+#line 4 "G:\KEKChat\KEKChat\Pages\ChatRoom.razor"
 using BlazorChat;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\ChatRoom.razor"
+#line 5 "G:\KEKChat\KEKChat\Pages\ChatRoom.razor"
+using KEKChat.Pages;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "G:\KEKChat\KEKChat\Pages\ChatRoom.razor"
 using System.IO;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\ChatRoom.razor"
+#line 7 "G:\KEKChat\KEKChat\Pages\ChatRoom.razor"
 using BlazorInputFile;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 7 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\ChatRoom.razor"
-using KEKChat.Services;
 
 #line default
 #line hidden
@@ -119,13 +119,45 @@ using KEKChat.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 58 "C:\Users\User\Desktop\KEKChat\KEKChat\Pages\ChatRoom.razor"
+#line 83 "G:\KEKChat\KEKChat\Pages\ChatRoom.razor"
        
+
+
+
+    string status;
+    string imageDataUri;
+
+    private bool Toggle { get; set; }
+
+    async Task HandleSelection(IFileListEntry[] files)
+    {
+        var rawFile = files.FirstOrDefault();
+        if (rawFile != null)
+        {
+            // Load as an image file in memory
+            var format = "image/jpeg";
+
+            var imageFile = await rawFile.ToImageFileAsync(format, 640, 480);
+            var ms = new MemoryStream();
+            await imageFile.Data.CopyToAsync(ms);
+
+            // Make a data URL so we can display it
+            imageDataUri = $"data:{format};base64,{Convert.ToBase64String(ms.ToArray())}";
+            status = $"Finished loading {ms.Length} bytes from {imageFile.Name}";
+
+            Toggle = !Toggle;
+
+
+
+            await SendAsync(imageDataUri);
+        }
+    }
+
     // flag to indicate chat status
     private bool _isChatting = false;
 
     // name of the user who will be chatting
-    private string _username;
+    private string _username = Login.Username;
 
     // on-screen message
     private string _message;
@@ -138,6 +170,8 @@ using KEKChat.Services;
 
     private string _hubUrl;
     private HubConnection _hubConnection;
+
+
 
     public async Task Chat()
     {
@@ -185,6 +219,7 @@ using KEKChat.Services;
 
         _messages.Add(new Message(name, message, isMine));
 
+
         // Inform blazor the UI needs updating
         StateHasChanged();
     }
@@ -212,6 +247,8 @@ using KEKChat.Services;
             _newMessage = string.Empty;
         }
     }
+
+
 
     private class Message
     {
