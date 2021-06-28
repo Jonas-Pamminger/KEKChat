@@ -4,25 +4,29 @@
 @using KEKChat.Pages;
 @inject NavigationManager NavManager
 
-<h2>
-    <u>
-        <big class="text-muted">Login</big>
-    </u>
-</h2>
+<div class="loginPage">
+    <div style="position:absolute; left:50px; top:20px;">
+        <h2 class="textLogin">Login</h2>
+    </div>
 
-<h3>
-    Username
-</h3>
-<input type="text" @bind="username" />
-<br />
-<br />
-<h3>
-    Password
-</h3>
-<input type="text" @bind="password" />
+    <h1></h1>
+    <h3></h3>
 
+    <h3 class="textd">
+        Username
+    </h3>
+    <input class="inputE" type="text" @bind="username" />
+    <br />
+    <br />
+    <h3 class="textd">
+        Password
+    </h3>
+    <input class="inputE" type="text" @bind="password" />
+    <h3></h3>
+    <h1></h1>
 
-<button class="btn btn-outline-success" @onclick="() => CheckData()">Login</button>
+    <button class="btn btn-secondary btn-lg btn-block" @onclick="() => CheckData()">Login</button>
+</div>
 
 @if (CheckData() == false && clicked == true)
 {
@@ -41,7 +45,7 @@
     ///
 
     public static string Username { get; set; }
-    
+
     private bool CheckData()
     {
         if (i < 3)

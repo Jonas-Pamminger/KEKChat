@@ -243,3 +243,63 @@ app {
         /*display: inline;*/
     }
 }
+
+.login {
+    background-color: #4CAF50;
+    border-radius: 13px;
+    color: white;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+}
+
+    .login:hover {
+        background-color: #367d39;
+    }
+
+.register {
+    background-color: gray;
+    border-radius: 13px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+}
+
+    .register:hover {
+        background-color: #6b6b6b
+    }
+
+.loginPage {
+    position: fixed; /* or absolute */
+    top: 20%;
+    left: 40%;
+    padding: 100px;
+    border: 4px;
+    background-color:lightgray;
+    border-color:black;
+}
+
+.textd {
+    font-size:30px;
+
+
+}
+
+.inputE {
+    padding: 7px;
+    border-color: lightgray;
+    font-size:20px;
+}
+
+.textLogin {
+    font-size:60px;
+    color: black;
+    font-style: normal; fomt-weight:700px; 
+
+
+}
