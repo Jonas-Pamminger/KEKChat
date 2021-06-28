@@ -1,0 +1,27 @@
+﻿@page "/register"
+@using KEKChat.Controllers
+
+<h3>Register</h3>
+
+<h3>
+    Username
+</h3>
+<input type="text" @bind="username" />
+<br />
+<br />
+<h3>
+    Password
+</h3>
+<input type="text" @bind="password" />
+
+<button @onclick="InputInfo">Register</button>
+
+@code {
+    string username;
+    string password;
+
+    private void InputInfo()
+    {
+        DatabaseController.InputInformation(username, password);
+    }
+}
